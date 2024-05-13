@@ -1,0 +1,225 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <meta name="viewport" content="minimum-scale=1,initial-scale=1,width=device-width,shrink-to-fit=no,maximum-scale=1,user-scalable=no"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="Logo_last.png">
+        
+        <style>
+
+            #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+              
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 18px;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Verbs</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="2.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11"  id='storydiv'>
+                <p id="story" style="text-align:left; width:100%; font-size: 20px;">
+                    In the previous class we learnt transitive verbs, intransitive verbs and ditransitive
+                    verbs. All these types of verbs are <span style="font-weight: bolder;font-style: italic;">ACTION</span>  verbs.
+                    <br><br>
+                    However, <i> all verbs do not talk about actions. </i> Verbs have various functions
+                    and are named accordingly.
+                    Certain verbs just tell us about:<br><br>
+
+                    
+                  ● What people or things are <br>
+                  ● The existence of people and things <br>
+                  ● Describe them or add details about them. <br><br>
+
+                  These verbs are called <span style="font-weight: bolder;font-style: italic;color: darkblue;">LINKING </span> Verbs.  <br>
+
+
+                  Before we know more about linking verbs let us read about a historical figure
+                  called Emmy Noether from the field of science.
+                  
+                </p>     
+            </div>
+        </center>
+        </div>
+        <br>
+        <div class="" style="text-align:center; padding-top:1%">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+  
+        </div>
+    
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg", "Assets/7.jpg", "Assets/8.jpg", "Assets/9.jpg", "Assets/10.jpg", "Assets/11.jpg", "Assets/12.jpg", "Assets/13.jpg"];
+            var para=["Albert Einstein is one of the most famous scientists. He is best known for his theory of relativity, which explains how objects behave in space and time. What few people know is that the maths that made Einstein's theory possible was the work of a woman named Emmy Noether.",
+
+
+                        "Let us look at the first sentence of the paragraph you have just read:<br> <i>“Albert Einstein is one of the most famous scientists.</i>”<br><br>Here, <span style='color: blue;'>Albert Einstein</span>,<span style='color: red;'> the subject</span> of the sentence is NOT doing any action. Still, the verb “is” is helping us understand <u>what he is</u>. <br> The verb <i> <span style='color:#8c52ff;'> “is” </span> </i> is linking Albert Einstein with the detail -   “one of the famous scientists.” Since, <span style='color: blue;'> “one of the famous scientists” </span> is talking about <span style='color: red;'> the subject </span> Albert Einstein, we will call it <span style='color: red;'> subject complement.</span>",
+
+                      "Noether was born in Germany in 1882. Her father was a mathematician. Emmy showed an early ability in maths. She did well in school and earned her doctorate in 1907, despite the government of her time believing that admitting women into academics would “overthrow all academic order.”While Einstein was working on his scientific theories, Noether was teaching maths, without being paid for her work, at her local university. ",
+
+                      "● When the  <span style='color:red;'> subject complement </span> is a <span style='color:#8c52ff;'>  noun or a noun phrase </span> we call it <span style='color:blue;'> “Predicate Noun” </span> or <span style='color:blue;'> “Predicate Nominative”</span>. Thus, <i> “Mathematician” </i> is a Predicate noun. <br> <br> ● In the statement discussed earlier, the predicate nominative <span style='color:blue;'> “one of the famous scientists” </span> is a <span style='color:#8c52ff;'> noun phrase.</span><br><br>* <span style='color:#8c52ff;'> A noun phrase is a group of words in a sentence that behaves in the same way as a single noun*  </span>",
+
+                    
+
+                      "In 1915, Noether was invited to the University of Göttingen to help two world-renowned mathematicians with a problem. Einstein's theory of gravity, or general relativity was new. It had been published earlier that year, and seemed to contradict the well-established principle of physics called the conservation of energy.",
+
+                      "This principle says that while energy can and does change forms, it cannot be destroyed. The total amount of energy in the universe remains constant. Noether agreed to help try to solve the problem and reconcile the two theories. Her solution showed that energy is always conserved, though the conservation may require a sufficiently large expanse of space to actually work out.",
+
+                      "Here, The linking verb <i> <span style='color:#8c52ff;'>  “was” </span></i> is establishing a link between the <span style='color:blue;'>  <span style='color: red;'> subject </span> Einstein’s theory of gravity or general relativity </span> and the <span style='color:blue;'>  <span style='color: red;'>  subject complement </span> “new” </span> and is commenting on the age of the theory.<br> <br> When the <i><span style='color: red;'> subject complement </span> </i> is an <span style='color:#8c52ff;'>  adjective or adjective phrase </span> we call it <span style='color:blue;'>  “Predicate adjective”</span>. Thus, “New” is a Predicate adjective.<br><br> *<span style='color:#8c52ff;'>  An adjective phrase is a group of words in a sentence that behaves as an adjective.*</span>",
+
+                      "As a result of this work, Noether was hired by the university and finally began to get paid. While there, she developed the theorem for which she is best known, which says that every symmetry has an associated conservation law, and for every conservation law, there's an associated symmetry.",
+
+                      "In 1932, she was the first woman ever to give the keynote speech at the International Congress of Mathematicians. Of the 420 mathematicians gathered, she was also the only woman in attendance.",
+
+                      "A few months later, the Nazis forbade Jewish professors from teaching in German universities, and Noether, who was Jewish, lost her job. While Einstein moved to the United States and worked at Princeton, Noether was given refuge at Bryn Mawr, a women's college in Pennsylvania.",
+
+                      "<span style='background-color: brown;color: white;'> PQ: </span> <br> <br> 1) What was the religion of Emmy Noether ? <br> Ans: Judaism <br> 2) In which year did Emmy Noether give the keynote speech at the international Congress of Mathematicians? <br> Ans: 1932 <br> 3) Who worked at Bryn Mawr in Pennsylvania ? <br> Emmy Noether <br>  4) Who worked at Princeton in the United States? <br> Albert Einstein",
+
+                      "<img src='12th.jpg' style='width: 100%;height:360px;' alt=''>",
+
+                      "These verbs are functioning as linking verbs by establishing a link between the subject and the subject complement.<br><br>We can also observe that all subject complements are either Predicate Adjectives or Predicate Nouns in the above statements, which means they are either adding details about the subject, or are describing the subject.<br><br> ",
+
+                    
+
+                      
+                    ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("about").innerHTML = "DICUSSION";
+                    document.getElementById("story").innerHTML = " <b style='color:#8c52ff;'>  Grow, Turn(Change over time), Prove </b> and <b style='color:#8c52ff;'>  Remain </b> are also used as LINKING VERBS as they help in describing the subject in a sentence.<br>Let us now look at the statements for clarity: <br> 1) The tree <b style='color:purple;'> grew </b> tall <br> 2) His face <b style='color:#8c52ff;'> turned </b> red <br> 3) His experiment <b style='color:#8c52ff;'> proved </b> successful. <br> 4) Please <b style='color:#8c52ff;'> remain </b> calm.(subject is ‘YOU’- It is not mentioned)";
+                    document.getElementById("family").src = "last.jpg";
+                   
+
+                    
+                }
+                else{
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Emmy Noether"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="20px"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Verbs"
+                    document.getElementById("story").innerHTML = 'In the previous class we learnt transitive verbs, intransitive verbs and ditransitive verbs. All these types of verbs are <span style="font-weight: bolder;font-style: italic;"> ACTION </span> verbs. <br><br>  However, <i> all verbs do not talk about actions.</i> Verbs have various functions and are named accordingly. Certain verbs just tell us about:<br><br>    ● What people or things are <br>     ● The existence of people and things <br>    ● Describe them or add details about them. <br><br>     These verbs are called <span style="font-weight: bolder;font-style: italic;color: darkblue;"> LINKING </span> Verbs. <br> Before we know more about linking verbs let us read about a historical figure called Emmy Noether from the field of science.';
+                }
+                else{
+                document.getElementById("story").style.fontSize="22px"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
